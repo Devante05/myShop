@@ -6,7 +6,7 @@ const params = fileName => {
   
     const imageParams = {
 
-      Bucket: 'plant-user-images-4629f688-052e-4492-8bfa-7227d9ffdc01',
+      Bucket: process.env.PHOTO_BUCKET,
       Key: `${uuidv4()}.${fileType}`,
       Body: fileName.buffer,
       ACL: 'public-read'
