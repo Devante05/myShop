@@ -77,7 +77,6 @@ const TheForm = () => {
       if (!res.ok) throw new Error(res.statusText);
         const postResponse = await res.json();
         setPhotoUrlState({image: postResponse.Location})
-        console.log(postResponse.Location)
         return postResponse.Location;
   
       } 
@@ -138,7 +137,7 @@ const TheForm = () => {
                 <Form className="flex-row justify-center justify-space-between-md align-stretch"
                 onSubmit={handleSubmit}>
         <Form.Group id = "labeling">
-            <Form.Label >Username</Form.Label>
+            <Form.Label >{process.env.REACT_APP_API_KEY}</Form.Label>
             <Form.Control
             required
             ref = {userRef}
