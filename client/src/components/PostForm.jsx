@@ -105,7 +105,7 @@ const TheForm = () => {
           cost: costRef.current.value,
           description: descriptionRef.current.value,
           image: photoUrlState.image,
-          email: emailState.email,
+          // email: emailState.email,
           date: Date.now()
           
         })
@@ -119,7 +119,7 @@ const TheForm = () => {
       descriptionRef.current.value = "";    
       fileInput.current.value = "";
       photoUrlState.image = "";
-      emailState.email = "";
+      // emailState.email = "";
       
       } 
       catch(error) {
