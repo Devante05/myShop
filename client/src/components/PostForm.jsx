@@ -51,17 +51,9 @@ const TheForm = () => {
     };
   }
 
-
-
-
-
-
-
-
-
   const handleImageUpload = (e) => {
     e.preventDefault();
-    // setEmailState({email});
+    setEmailState({emailState});
 
     const data =  new FormData();
     data.append('image', fileInput.current.files[0]);
@@ -105,7 +97,7 @@ const TheForm = () => {
           cost: costRef.current.value,
           description: descriptionRef.current.value,
           image: photoUrlState.image,
-          // email: emailState.email,
+          email: emailState,
           date: Date.now()
           
         })
@@ -137,7 +129,7 @@ const TheForm = () => {
                 <Form className="flex-row justify-center justify-space-between-md align-stretch"
                 onSubmit={handleSubmit}>
         <Form.Group id = "labeling">
-            <Form.Label >{process.env.REACT_APP_API_KEY}</Form.Label>
+            <Form.Label >Username</Form.Label>
             <Form.Control
             required
             ref = {userRef}
