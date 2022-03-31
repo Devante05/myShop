@@ -22,7 +22,7 @@ const s3 = new AWS.S3({
 //   });
 
   router.post('/photo-upload', upload, (req, res) => {
-    // const paramsConfig = require('../utils/params-config');
+    const paramsConfig = require('../utils/params-config');
 
     console.log("post('/api/photo-upload'", req.file);
     const params = paramsConfig(req.file);
