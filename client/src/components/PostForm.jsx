@@ -23,9 +23,9 @@ const TheForm = () => {
   const [photoUrlState, setPhotoUrlState] = useState();
   
   //pulling email from firebase
-  const auth = useAuth();
-  const user = auth.currentUser;
-  const email = user.email.toString();
+  // const auth = useAuth();
+  // const user = auth.currentUser;
+  // const email = user.email.toString();
 
 
 
@@ -61,7 +61,7 @@ const TheForm = () => {
 
   const handleImageUpload = (e) => {
     e.preventDefault();
-    setEmailState({email});
+    // setEmailState({email});
 
     const data =  new FormData();
     data.append('image', fileInput.current.files[0]);
